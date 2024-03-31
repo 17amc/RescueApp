@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cambiar contraseña</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nueva contraseña</ion-label>
+      <ion-input [(ngModel)]="newPassword" type="password"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Confirmar nueva contraseña</ion-label>
+      <ion-input [(ngModel)]="confirm" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="updateUser()">Cambiar contraseña</ion-button>
+</ion-content>

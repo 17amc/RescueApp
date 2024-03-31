@@ -1,0 +1,34 @@
+<ion-content>
+
+  <div class="back-title">
+    <h1 class="listaTitulo">Lista de usuarios</h1>
+  </div>
+  
+  <ion-searchbar [(ngModel)]="documentNumber" placeholder="Buscar por documento" (ionChange)="filterUsers($event.target.value)"></ion-searchbar>
+
+
+  
+
+  <ion-list *ngIf="filteredUsers.length > 0" class="list-user">
+    <ion-item *ngFor="let user of filteredUsers" class="contenedorElemento">
+
+    <ion-thumbnail slot="start">
+  <img class="fotoPerfil" [src]="'https://rescueapprescue.000webhostapp.com/servidor/' + user?.ImagenPerfil" (error)="setDefaultSrc($event)" alt="Foto">
+</ion-thumbnail>
+
+
+    <ion-label class="user-info">
+      <h2 class="nombre">{{ user.Nombres.split(' ')[0] }} {{ user.Apellidos.split(' ')[0] }}</h2>
+      <p class="documento">{{ user.TipoDocumento }}: {{ user.NumeroDocumento }}</p>
+    </ion-label>
+
+<ion-button (click)="editarPerfil(user)" class="editarPerfil">Editar</ion-button>
+  </ion-item>
+</ion-list>
+
+<ion-text color="danger" *ngIf="errorMessage" class="toast-alert">{{ errorMessage }}</ion-text>
+
+<ion-icon name="arrow-back" (click)="GoHomeSu()" class="back-icon"></ion-icon>
+
+</ion-content>
+

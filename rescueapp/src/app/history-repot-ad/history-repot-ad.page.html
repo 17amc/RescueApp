@@ -1,0 +1,26 @@
+<ion-content class="viewhistory-container" [fullscreen]="true">
+  <div class="btn-estado" *ngIf="!cargandoReportes && reportesCargados && reportes.length > 0">
+    <ion-button id="btnTodos" (click)="cambiarFiltro('')">Todos</ion-button>
+    <ion-button id="btnPendientes" (click)="cambiarFiltro('Pendiente')">Pendientes</ion-button>
+    <ion-button id="btnFinalizado" (click)="cambiarFiltro('Finalizado')">Finalizados</ion-button>
+  </div>
+
+  <ion-list class="contenedorList">
+    <ion-item class="contenedorElemento" *ngFor="let reporte of reportes" (click)="abrirModal(reporte)">
+      <ion-label>
+        <h2>{{ reporte.Nombre }}</h2>
+        <p>{{ reporte.Descripcion }}</p>
+        <ion-button class="btnFinalizar" (click)="presentActionSheet($event, reporte)">{{ reporte.EstadoReporte }}</ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngIf="reportes.length === 0 && !cargandoReportes && reportesCargados">
+    <ion-card-content>
+      <p>No hay reportes disponibles.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

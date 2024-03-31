@@ -1,0 +1,95 @@
+.viewhistory-container {
+    animation-name: fadeIn; 
+    animation-duration: 0.5s; 
+    --background: #fff;
+  }
+   
+  body {
+    font-family: Arial, sans-serif;
+    --background:  #ff9e62;
+    color: #fff;
+  }
+
+.btn-estado {
+    display: flex;
+    margin: 10px; /* Espaciado inferior */
+  }
+  
+  .btn-estado ion-button {
+    flex: 1; /* Para que los botones se ajusten automáticamente */
+    font-size: 12px; /* Tamaño de la fuente */
+    margin-right: 5px; /* Espaciado entre botones */
+  }
+  
+  .btn-estado ion-button:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último botón */
+  }
+  
+  
+#btnTodos {
+    width: 40%; 
+    --background: #FF914D;    
+}
+
+#btnPendientes {
+    width: 40%; 
+    --background: #FF914D;
+}
+
+#btnFinalizado {
+    width: 40%; 
+    --background: #FF914D;
+}
+
+.contenedorList {
+    background-color: #fff; 
+    width: calc(100% - 20px); 
+    max-width: 600px; 
+    margin: 10px auto; 
+    padding: 10px; 
+    overflow-y: auto; 
+     
+  }
+  
+  .contenedorElemento {
+    margin-bottom: 20px; 
+    --background: #FFC7A5;
+    display: block; 
+    align-items: center; 
+    padding: 5px; 
+    color: #000;
+    --border-radius: 10px; 
+  }
+
+  .btnFinalizar{
+    --background: #FFF2DE; 
+    border-radius: 10%;
+    color: #FF914D;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+  }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; 
+  }
+  10%, 90% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-estado ion-button {
+    font-size: 10px; /* Tamaño de la fuente para dispositivos móviles */
+  }
+}

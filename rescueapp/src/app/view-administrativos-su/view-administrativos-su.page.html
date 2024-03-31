@@ -1,0 +1,26 @@
+<ion-content>
+
+  <div class="back-title">
+    <h1 class="listaTitulo">Lista de Admin</h1>
+  </div>
+
+    <ion-searchbar [(ngModel)]="searchValue" placeholder="Buscar por documento" (ionChange)="filterAdministrativos($event.target.value)"></ion-searchbar>
+
+    <ion-list *ngIf="filteredAdmins.length > 0" class="list-user">
+      <ion-item *ngFor="let admin of filteredAdmins" class="contenedorElemento">
+       
+        <ion-thumbnail slot="start">
+          <img class="fotoPerfil" [src]="'https://rescueapprescue.000webhostapp.com/servidor/' + admin?.ImagenPerfil" (error)="setDefaultSrc($event)" alt="Foto">
+        </ion-thumbnail>
+
+
+        <ion-label class="user-info">
+          <h2 class="nombre">{{ admin.TipoDocumento }}: {{ admin.NumeroDocumento }}</h2>
+          <p class="documento">{{ admin.Especializacion }}</p>
+        </ion-label>
+          <ion-button (click)="openEditModal(admin)" class="editarPerfil">Editar</ion-button>  
+      </ion-item>
+    </ion-list>
+
+    <ion-icon name="arrow-back" (click)="GoHomeSu()" class="back-icon"></ion-icon>
+</ion-content>

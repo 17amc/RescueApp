@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tituloEditar">Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="campos-container">
+    <ion-item>
+      <ion-label position="floating">Nombres</ion-label>
+      <ion-input [(ngModel)]="user.Nombres" name="nombres"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input [(ngModel)]="user.Apellidos" name="apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tipo de Documento</ion-label>
+      <ion-input [(ngModel)]="user.TipoDocumento" name="tipoDocumento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de Documento</ion-label>
+      <ion-input [(ngModel)]="user.NumeroDocumento" name="numeroDocumento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input [(ngModel)]="user.Telefono" name="telefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ficha</ion-label>
+      <ion-input [(ngModel)]="user.Ficha" name="ficha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tipo de Usuario</ion-label>
+      <ion-input [(ngModel)]="user.TipoUsuario" name="tipoUsuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Centro de Formación</ion-label>
+      <ion-input [(ngModel)]="user.CentroFormacion" name="centroFormacion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="user.Correo" name="correo"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="guardarCambios()" class="botonGuardar">Guardar</ion-button>
+
+    <ion-text color="danger" *ngIf="errorMessage" class="mensajeError">{{ errorMessage }}</ion-text>
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Actualizar datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Centro formacion</ion-label>
+    <ion-input [(ngModel)]="user.CentroFormacion" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Ficha</ion-label>
+    <ion-input [(ngModel)]="user.Ficha" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="updateUser()">Actualizar datos</ion-button>
+</ion-content>

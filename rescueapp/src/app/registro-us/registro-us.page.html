@@ -1,0 +1,119 @@
+<ion-content [fullscreen]="true">
+
+  <div class="logo-container"> 
+    <img class="logo" src="assets/logopagemain3.png"/>
+  </div>
+
+<div class="back-form"><h1 class="title-registro">Registrarse</h1></div>
+<ion-icon *ngIf="part == 2" name="arrow-back" (click)="part = 1" class="back-icon"></ion-icon>
+<ion-icon *ngIf="part == 3" name="arrow-back" (click)="onBackToPart2()" class="back-icon"></ion-icon>
+<ion-icon *ngIf="part == 4" name="arrow-back" (click)="part = 3" class="back-icon"></ion-icon>
+
+
+<div *ngIf="part == 1" class="form-container">
+  <div class="input-group">
+    <ion-input label="Nombres"  label-placement="floating"  class="inp-name"  type="text" [(ngModel)]="datos.Nombres"></ion-input>
+  </div>
+
+  <div class="input-group">
+    <ion-input   label="Apellidos"  label-placement="floating" type="text"  class="inp-lastname" [(ngModel)]="datos.Apellidos"></ion-input>
+  </div>
+
+  <div class="centered-btn">
+    <ion-button class="btn-siguiente" (click)="siguiente()">Siguiente</ion-button>
+  </div>
+</div>
+
+
+
+   <div *ngIf="part == 2" class="form-container">
+    <div class="input-group">
+       <ion-select label="Tipo de documento"  label-placement="floating" class="inp-tipodoc" [(ngModel)]="datos.TipoDocumento">
+        <ion-select-option value="cc">Cédula de Ciudadanía      </ion-select-option>
+        <ion-select-option value="ce">Cédula de Extranjería      </ion-select-option>
+        <ion-select-option value="ti">Tarjeta de Identidad      </ion-select-option>
+        <ion-select-option value="pp">Pasaporte      </ion-select-option>
+        <ion-select-option value="nit">NIT      </ion-select-option>
+       </ion-select>
+      </div>
+
+   
+     <div class="input-group" (click)="verificarTipoDocumento()">
+        <ion-input  label="Numero documento"  label-placement="floating" class="inp-numerodoc" [(ngModel)]="datos.NumeroDocumento" [disabled]="!datos.TipoDocumento"></ion-input>
+     </div>
+  
+ 
+     <div class="centered-btn">
+      <ion-button class="btn-siguiente" (click)="siguiente()">Siguiente</ion-button>
+    </div>
+   </div>
+
+
+
+   
+ 
+   <div *ngIf="part == 3"  class="form-container">
+
+    <div class="input-group" *ngIf="showPhone">
+       <ion-input label="Telefono"  label-placement="floating" type="text" class="inp-telefono" [(ngModel)]="datos.Telefono"></ion-input>
+    </div>
+  
+    <div class="input-group" *ngIf="showUserType">
+       <ion-select label="Tipo de usuario"  label-placement="floating" class="inp-tipous" [(ngModel)]="datos.TipoUsuario" (ionChange)="onUserTypeChange($event)">
+         <ion-select-option value="instructor">Instructor      </ion-select-option>
+         <ion-select-option value="estudiante">Estudiante      </ion-select-option>
+         <ion-select-option value="visitante">Visitante      </ion-select-option>
+         <ion-select-option value="personal">Personal del SENA      </ion-select-option>
+         <ion-select-option value="rector">Rector      </ion-select-option>
+       </ion-select>
+    </div>
+  
+    <div class="input-group" *ngIf="showCenterAndFicha">
+       <ion-select label="Centro de formación"  label-placement="floating" class="inp-centroform" [(ngModel)]="datos.CentroFormacion">
+         <ion-select-option value="tics">Tics      </ion-select-option>
+       </ion-select>
+    </div>
+  
+    <div class="input-group" *ngIf="showCenterAndFicha">
+      <ion-input label="Numero de ficha"  label-placement="floating" class="inp-ficha" type="text" [(ngModel)]="datos.Ficha"></ion-input>
+    </div>
+  
+    <div class="centered-btn">
+      <ion-button class="btn-siguiente" (click)="siguiente()">Siguiente</ion-button>
+    </div>
+    </div>
+  
+
+ 
+   <div *ngIf="part == 4" class="form-container">
+
+    <div class="input-group">
+       <ion-input  label="Correo electronico"  label-placement="floating" class="inp-correo" type="email" [(ngModel)]="datos.Correo"></ion-input>
+      </div>
+
+      <div class="input-group">
+       <ion-input label="Contraseña"  label-placement="floating" class="inp-contraseña" type="password" [(ngModel)]="datos.Contrasena"></ion-input>
+      </div>
+
+      <div class="input-group">
+      <ion-input label="Confirmar contraseña"  label-placement="floating" class="inp-confirmar" type="password" [(ngModel)]="datos.confirmPassword"></ion-input>
+    </div>
+
+
+
+    <div class="centered-btn-registro">
+     <ion-button class="btn-registro"  (click)="enviar()">Registrarme</ion-button>
+    </div>
+    
+  </div>
+  
+
+    <div class="login-button-container">
+      <a  (click)="Gologin()" class="btn-gologin">Iniciar sesión</a>
+    </div>
+
+
+ </ion-content>
+
+ 
+

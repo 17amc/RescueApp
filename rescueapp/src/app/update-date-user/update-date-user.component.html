@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Actualizar datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Nombres</ion-label>
+    <ion-input [(ngModel)]="user.Nombres" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellidos</ion-label>
+    <ion-input [(ngModel)]="user.Apellidos" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input [(ngModel)]="user.Correo" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefono</ion-label>
+    <ion-input [(ngModel)]="user.Telefono" type="tel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Centro de formacion</ion-label>
+    <ion-input [(ngModel)]="user.CentroFormacion" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Ficha</ion-label>
+    <ion-input [(ngModel)]="user.Ficha" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input [(ngModel)]="user.Contrasena" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="updateUser()">Actualizar datos</ion-button>
+</ion-content>

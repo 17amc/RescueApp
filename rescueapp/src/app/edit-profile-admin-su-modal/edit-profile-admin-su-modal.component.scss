@@ -1,0 +1,49 @@
+
+.tituloEditar {
+    color: #fff; 
+    font-size: 18px;
+  }
+
+  ion-toolbar {
+    display: flex; 
+    --background: #ff9e62;
+    border-color: transparent;  
+    color: #fff;
+  }
+  
+  .ion-padding{
+    --background: #fff;
+    overflow-y: auto;
+  }
+ 
+  .campos-container {
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 1px solid #ff9e62;
+  }
+  
+  .campos-container ion-item {
+    --ion-item-background: transparent; 
+    --ion-item-padding-start: 0; 
+    --ion-item-padding-end: 0; 
+    --ion-item-padding-top: 20px; 
+    --ion-item-padding-bottom: 20px; 
+    color: #000; 
+  }
+
+  .botonGuardar {
+    width: 50%; 
+    margin-top: 20px;
+    --background: #FF914D;
+    margin-left: 25%;
+  }
+  
+  .mensajeError {
+    text-align: center; 
+    margin-top: 20px;
+  }
+  
+  @media only screen and (min-width: 600px) {
+  
+  }

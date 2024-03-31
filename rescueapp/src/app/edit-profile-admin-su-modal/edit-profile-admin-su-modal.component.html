@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tituloEditar">Editar Perfil Administrativo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="campos-container">
+    <ion-item>
+      <ion-label position="floating">Tipo documento</ion-label>
+      <ion-input [(ngModel)]="admin.TipoDocumento" name="nombres"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Numero de documentos</ion-label>
+      <ion-input [(ngModel)]="admin.NumeroDocumento" name="apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Especialización</ion-label>
+      <ion-input [(ngModel)]="admin.Especializacion" name="especializacion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input [(ngModel)]="admin.Telefono" name="telefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Centro de formación</ion-label>
+      <ion-input [(ngModel)]="admin.CentroFormacion" name="centroFormacion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="admin.Correo" name="correo"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="guardarCambios()" class="botonGuardar">Guardar</ion-button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,113 @@
+  
+.encabezado {
+    --background:  #ff9e62;
+    background-color: #ff9e62;
+    border-color: transparent;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+
+.viewuserreport-container {
+    animation-name: fadeIn; 
+    animation-duration: 0.5s; 
+    --background: #fff;
+  }
+   
+  body {
+    font-family: Arial, sans-serif;
+    --background:  #ff9e62;
+    color: #fff;
+  }
+  
+  .listaTitulo{
+      align-items: center;
+      text-align: center;
+      color: #FF914D;
+      font-size: 25px;
+      margin-top: 5%;
+  }
+
+.btn-estado {
+    display: flex;
+    margin: 10px; 
+  }
+  
+  .btn-estado ion-button {
+    flex: 1; 
+    font-size: 12px; 
+    margin-right: 5px; 
+  }
+  
+  .btn-estado ion-button:last-child {
+    margin-right: 0; 
+  }
+  
+  
+#btnTodos {
+    width: 40%; 
+    --background: #FF914D;    
+}
+
+#btnPendientes {
+    width: 40%; 
+    --background: #FF914D;
+}
+
+#btnFinalizado {
+    width: 40%; 
+    --background: #FF914D;
+}
+
+.contenedorList {
+    background-color: #fff; 
+    width: calc(100% - 20px); 
+    max-width: 600px; 
+    margin: 10px auto; 
+    padding: 10px; 
+    overflow-y: auto; 
+     
+  }
+  
+  .contenedorElemento {
+    margin-bottom: 20px; 
+    --background: #FFC7A5;
+    display: block; 
+    align-items: center; 
+    padding: 5px; 
+    color: #000;
+    --border-radius: 10px; 
+  }
+
+  .btnFinalizar{
+    --background: #FFF2DE; 
+    border-radius: 10%;
+    color: #FF914D;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+  }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; 
+  }
+  10%, 90% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-estado ion-button {
+    font-size: 10px; 
+  }
+}

@@ -1,0 +1,112 @@
+.contenido {
+    --background: #FF914D; 
+ 
+  }
+  
+  .encabezado {
+    --background:  #FF914D;
+    background-color: #FF914D;
+    border-color: transparent;
+    border-radius: 10px;
+    color: #fff;
+}
+  
+.titulo-bienvenida {
+    font-size: 16px; 
+    color: #fff;
+}
+  
+ion-toolbar {
+    display: flex; 
+    --background: #FF914D;
+    border-color: transparent;  
+    color: #fff;
+}
+  
+.cerrar {
+    font-size: 13px;
+    background-color: #ffbc9300;
+    color: #fff;
+    margin-right: 2%; 
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+  .back-title {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 35vh; 
+  }
+  
+  .panel{
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+
+  
+  .botones-container {
+    background-color: #ffffff; 
+    padding: 20px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    height: 55vh; 
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
+    color: #fff;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    align-items: center;
+  }
+  
+  .boton1,.boton2 {
+      background-color: #FF914D;
+      color: #fff; 
+      border: none; 
+      border-radius: 12%;
+      width: 134px;
+      height: 129px;
+      display: inline-flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      text-align: center; 
+      margin: 8% 13px 13px; 
+      font-size: 13.5px;
+  }
+
+  .imagen {
+      width: 50px; 
+      height: 50px;
+  }
+  
+  .textBoton1 {
+      margin: 10px auto 10px; 
+      font-size: 13.5px;
+  }
+
+  .boton1:hover,
+  .boton2:hover {
+    background-color: #ffd1b5b7; 
+  }
+  
+  .boton1:active,
+  .boton2:active {
+    transform: translateY(1px); 
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .boton1 {
+      width: auto;
+    }
+  }

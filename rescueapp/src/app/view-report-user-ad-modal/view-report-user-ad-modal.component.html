@@ -1,0 +1,18 @@
+
+  <ion-header class="encabezado">
+    <ion-toolbar>
+      <ion-title class="listaTitulo">Detalle del Reporte</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="contenedorList">
+    <h1>Reporte de: {{ reporte.Nombre }}</h1>
+    <p>Ficha del estudiante: {{ reporte.Ficha }}</p>
+    <p>Lugar del reporte: {{ reporte.Lugar }}</p>
+    <p>Descripción: {{ reporte.Descripcion }}</p>
+    <p>Fecha: {{ reporte.Fecha }}</p>
+    <p>{{ reporte.EstadoReporte }}</p>
+  </ion-content>
+

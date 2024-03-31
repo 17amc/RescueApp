@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Información de mi perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
+      <img [src]="'https://rescueapprescue.000webhostapp.com/servidor/' + user?.ImagenPerfil" style="object-fit: cover; width: 100%; height: 100%;"/>
+    </div>
+    <ion-button expand="full" (click)="changeProfileImage()">Cambiar imagen de perfil</ion-button>
+  </ion-card>
+  
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Datos personales</ion-card-subtitle>
+      <ion-button fill="outline" size="small" (click)="openModal()">Editar</ion-button>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Nombre: {{user?.Nombres}}</p>
+      <p>Apellido(s): {{user?.Apellidos}}</p>
+    </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Datos de contacto</ion-card-subtitle>
+        <ion-button fill="outline" size="small" (click)="openModaldatacontact()">Editar</ion-button>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>Correo electrónico: {{user?.Correo}}</p>
+        <p>Teléfono: {{user?.Telefono}}</p>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Otros datos</ion-card-subtitle>
+        <ion-button fill="outline" size="small" (click)="openModaldatasena()" >Editar</ion-button>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>Centro de formación: {{user?.CentroFormacion}}</p>
+        <p>Ficha: {{user?.Ficha}}</p>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Contraseña</ion-card-subtitle>
+        <ion-button fill="outline" size="small" (click)="openModaldalogin()">Editar</ion-button>
+      </ion-card-header>
+    </ion-card>
+    </ion-content>
+    

@@ -1,0 +1,29 @@
+<ion-header class="encabezado">
+  <ion-toolbar class="encabezado">
+    <ion-title>Reportes del usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="viewuserreport-container">
+  <div class="btn-estado" *ngIf="reportes.length > 0">
+    <ion-button id="btnTodos" (click)="cambiarFiltro('')">Todos</ion-button>
+    <ion-button id="btnPendientes" (click)="cambiarFiltro('Pendiente')">Pendientes</ion-button>
+    <ion-button id="btnFinalizado" (click)="cambiarFiltro('Finalizado')">Finalizados</ion-button>
+  </div>
+
+  <ion-list class="contenedorList">
+    <ion-item *ngFor="let reporte of reportes" class="contenedorElemento">
+      <ion-label>
+        <h2>Lugar: {{ reporte.Lugar }}</h2>
+        <p class="descripcion">Descripcion: {{ reporte.Descripcion }}</p>
+        <p class="estado">Estado: {{ reporte.EstadoReporte }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngIf="reportes.length === 0 && !cargandoReportes && reportesCargados">
+    <ion-card-content>
+      <p>No hay reportes disponibles.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

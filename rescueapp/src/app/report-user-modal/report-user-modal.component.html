@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" style="background-color: red;">
+  <ion-list class="form-container">
+
+
+ 
+   <div *ngIf="part == 1" class="form-container">
+     <ion-item>
+      <p>id del usuario: {{user?.ID}}</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus molestias maxime dolorum cum commodi illo, suscipit debitis, rerum iure quod aliquid qui possimus dolore? Repudiandae doloribus eum ex ipsam!</p>
+     </ion-item>
+     <ion-button expand="full" (click)="siguiente()">Estoy seguro</ion-button>
+   </div>
+
+
+   <div *ngIf="part == 2" class="form-container">
+     <ion-item>
+      <ion-label floating>Lugar del incidente</ion-label>
+      <ion-input [(ngModel)]="reporte.Lugar"></ion-input>
+     </ion-item>
+ 
+     <ion-button expand="full" (click)="part = 1">Atrás</ion-button>
+     <ion-button expand="full"  (click)="siguiente()">Siguiente</ion-button>
+   </div>
+ 
+  
+   <div *ngIf="part == 3" class="form-container">
+     <ion-item>
+      <ion-label>Categoria del incidente</ion-label>
+      <ion-select [(ngModel)]="reporte.CategoriaID">
+        <ion-select-option value="1">Seguridad</ion-select-option>
+        <ion-select-option value="2">Infraestructura</ion-select-option>
+        <ion-select-option value="3">Salud</ion-select-option>
+        <ion-select-option value="4">Tecnologia</ion-select-option>
+        <ion-select-option value="5">Academicos</ion-select-option>
+      </ion-select>
+    </ion-item>
+ 
+ 
+     <ion-button expand="full" (click)="part = 2">Atrás</ion-button>
+     <ion-button expand="full" (click)="siguiente()">Siguiente</ion-button>
+   </div>
+ 
+
+   <div *ngIf="part == 4" class="form-container">
+     <ion-item>
+       <ion-label floating>Descripcion</ion-label>
+       <ion-input [(ngModel)]="reporte.Descripcion"></ion-input>
+     </ion-item>
+
+     <ion-button expand="full" (click)="part = 3">Atrás</ion-button>
+     <ion-button expand="full" (click)="enviarReport()">Enviar reporte</ion-button>
+   </div>
+  </ion-list>
+ </ion-content>
+
+ 

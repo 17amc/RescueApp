@@ -1,0 +1,35 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Documento de identidad</ion-label>
+    <ion-input [(ngModel)]="user.numerodocumento" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="user.contrasena" type="password"></ion-input>
+  </ion-item>
+
+
+  <ion-button expand="full" (click)="login()">Login</ion-button>
+
+
+
+  <p style="text-align: center;">
+    <a routerLink="/change-pass">¿olvido su contraseña?</a>
+  </p> 
+
+  <p style="text-align: center;">
+    <a routerLink="/registro-us">Registrarse</a>
+  </p>
+
+</ion-content>
+
+
+

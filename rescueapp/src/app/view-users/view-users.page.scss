@@ -1,0 +1,123 @@
+
+ion-content {
+    --background: #ffffff; 
+}
+
+.viewuser-container {
+    animation-name: fadeIn; 
+    animation-duration: 0.5s; 
+    --background: #ffffff;
+  }
+
+  .back-title {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 17vh; 
+  }
+  
+  .listaTitulo{
+    font-size: 35px;
+    color: #FF914D;
+    font-weight: 200;
+  }
+  
+  ion-searchbar {
+      --background: #ffffff; 
+      --border-radius: 12px; 
+      margin-left: auto;
+      margin-right: auto;
+      width: 94%;
+      margin-top: -1vh;
+    }
+    
+    .list-user {
+ background: #ffffff;
+margin-top: 3vh; 
+    }
+
+    .contenedorElemento {
+      margin-bottom: 10px; 
+      --background: #FFC7A5;
+      display: block; 
+      align-items: center; 
+      padding: 5px; 
+      color: #000;
+      --border-radius: 14px; 
+      border: none;
+      max-width: 94%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+
+    .fotoPerfil {
+        width: 55px; 
+        height: 55px; 
+        border-radius: 50%; 
+        margin-right: 7px;
+        object-fit: cover;
+        object-position: center;
+      }
+      
+      
+    .nombre {
+      margin-bottom: 5px; 
+      font-size: 14px;
+    }
+    
+    .editarPerfil {
+      --background: transparent; 
+      border-radius: 10%;
+      margin-left: auto; 
+      color: #FF914D;
+      --border: none;
+      --box-shadow: none;
+      font-size: 12px;
+    }
+    
+    .back-icon {
+        position: absolute; 
+        top: 10px; 
+        left: 10px; 
+    color: #FF914D;
+    font-size: 30px;
+    font-weight: 200;
+    }
+
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0; 
+      }
+      to {
+        opacity: 1; 
+      }
+    }
+  
+  .toast-alert {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #f44336;
+    color: white; 
+    padding: 15px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+    animation: fadeInOut 4s ease-out forwards; 
+    text-align: center;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0; 
+    }
+    10%, 90% {
+      opacity: 1; 
+    }
+    100% {
+      opacity: 0; 
+    }
+  }
